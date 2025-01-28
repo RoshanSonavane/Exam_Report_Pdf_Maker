@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* body{
+    background:  rgba(85, 85, 85, 0.481) url("./static/logo.png");
+    background-blend-mode:multiply;
+    background-repeat: no-repeat;
+    background-position: center  ;
+    background-size: 800px 600px;
+    position: relative;
+  } */
+  
+#logo{  position: absolute;
+    height: 800px;
+    width: 800px;
+    opacity: 0.3;
+}
+
+
+h1{ position: relative;
+    color: blue;
+    font-family: 'Calibri';
+    font-weight: normal;
+    padding-left:20px ;
+    padding-top: 20px;
+}
+h2{ position: relative;
+    padding-left:20px ;
+    padding-top: 20px;
+}
+
+#info{position: relative;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 150px;    
+}
+#info>img{position: relative;
+    height: 200px;
+    width: 250px;
+}
+#info>table{position: relative;
+    border-collapse: collapse;
+    height: 200px;
+    width: 400px;
+    font-weight: bold;
+}
+table,td,th{position: relative;
+    border: 1px solid rgba(128, 128, 128, 0.891);
+    border-collapse: collapse;
+
+}
+
+td{position: relative;
+    padding-left: 20px;
+}
+
+#result_box{position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+#result_box>table{position: relative;
+    width: 70%;
+}
+#result_box>table>td,th,tr{position: relative;
+    height: 30px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#box{
+    padding-top: 10px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+    width: 80%;
+    height: 180px;
+
+}
+#box h1{
+    color: black;
+    
+}
+#performance{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.perf{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 12px;
+}
+.perf>img{
+    height: 50px;
+}
+.perf>aside{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+button{
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+    font-family: "calibri";
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    
+    background-color: rgba(255, 166, 0, 0.458);
+    
+    color: black;
+}

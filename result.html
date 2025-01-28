@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./static/logo.png" type="image/x-icon">
+    <title>Result</title>
+    <link rel="stylesheet" href="./style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+
+<div id="content">
+<body>
+    <img src="./static/logo.png" alt="" id="logo">
+    <div id="head">
+        <h1 id="exam_report">Examination Report</h1>
+        <h2 id="school_name"></h2>
+        <h2 id="year">Academic Year: </h2>
+    </div>
+
+    <div id="info">
+        <img src="./static/logo.png" alt="logo">
+        <table>
+            <tr>
+                <td>Student Name :</td>
+                <td id="student_name"></td>
+            </tr>
+            <tr>
+                <td>Classroom :</td>
+                <td id="classroom"></td>
+            </tr>
+            <tr>
+                <td>Class Teacher :</td>
+                <td id="teacher"></td>
+            </tr>
+            <tr>
+                <td>Examination :</td>
+                <td id="exam"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="result_box">
+    <h1 id="result_heading">Examination Results</h1>
+    <table id="result">
+        <thead>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            <th>Grade Point</th>
+        </thead>
+
+    </table></div>
+    <div id="box">
+    <h1>Student Performance</h1>
+    <div id="performance">
+        <section class="perf">
+            <img src="./static/p1.png" >
+            <aside>
+            <h1 id="score_p1"></h1>
+            <h2>Placement in Class</h2>
+        </aside>
+        </section>
+        <section class="perf">
+            <img src="./static/p2.png" >
+            <aside>
+            <h1 id="score_p2"></h1>
+            <h2>GPA</h2>
+        </aside>
+        </section>
+        <section class="perf">
+            <img src="./static/p3.png" >
+            <aside>
+            <h1 id="score_p3"></h1>
+            <h2>Total Marks</h2>
+        </aside>
+        </section>
+        <section class="perf">
+            <img src="./static/p4.png" >
+            <aside>
+            <h1 id="score_p4"></h1>
+            <h2>Total Marks %</h2>
+        </aside>
+        </section>
+
+    </div></div>
+
+</div><center>
+<button onclick="generatePDF()">Download PDF</button></center>
+<script>function generatePDF() {
+    const element = document.getElementById('content');
+    const formData = JSON.parse(sessionStorage.getItem('formData'));
+    html2pdf().from(element).set({
+      margin: 0,
+      filename: `${formData.student_name}_${formData.classroom}.pdf`,
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }).save();
+}</script>
+    <script type="module" src="./app2.mjs"></script>
+</body>
+</html>

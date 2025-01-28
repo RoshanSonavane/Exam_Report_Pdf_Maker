@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    background-color: rgba(255, 60, 0, 0.542);
+}
+form{
+    background-color: rgba(127, 255, 212, 0.361);
+    display: grid;
+    height: 500px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+button{
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    width: 80px;
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(255, 166, 0, 0.458);
+    color: black;
+}
